@@ -24,13 +24,18 @@ function App() {
     },
   ];
 
+  const handleAddExpense = expense => {
+    console.log("In App.js");
+    console.log(expense);
+  };
+
   return (
     <div className="App">
       <h1>Expense tracker</h1>
       <p>
         Tracking your spending habits so you don't loose sight of your money!!!
       </p>
-      <NewExpense />
+      <NewExpense onAddExpense={handleAddExpense} />
       <Expenses expenses={expenses} />
     </div>
   );
